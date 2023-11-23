@@ -1,0 +1,11 @@
+.App {
+  text-align: center;
+}
+.contenedor-nav{
+  display: flex;
+  flex-direction: column;
+}
+nav{
+  background-color: darkslategrey;
+  z-index: 10;
+}
