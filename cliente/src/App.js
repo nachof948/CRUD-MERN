@@ -1,11 +1,12 @@
 import './App.css';
-import { ListaUsuario, AgregarUsuario,EditarUsuario } from './indice';
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { ListaUsuario, AgregarUsuario, EditarUsuario } from './indice';
+import { BrowserRouter, Route, Routes, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <nav className="navbar position-fixed w-100 navbar-expand-lg " data-bs-theme="dark">
+    <BrowserRouter> {/* Mueve BrowserRouter aquí */}
+      <div className="App">
+        <nav className="navbar position-fixed w-100 navbar-expand-lg " data-bs-theme="dark">
           <div className="container contenedor-nav">
             <a className="navbar-brand" href="/">Sistema para agregar, editar o eliminar usuarios</a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,22 +18,20 @@ function App() {
                   <a className="nav-link" aria-current="page" href="/">Inicio</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="/agregarusuario">Agregar Usuario</a>
+                  <Link className="nav-link" to={"/agregarusuario"}>Agregar Usuario</Link>
                 </li>
               </ul>
-              </div>
+            </div>
           </div>
-      </nav>
+        </nav>
 
-      
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<ListaUsuario />}></Route>
-        <Route path='/agregarusuario' element={<AgregarUsuario />}></Route>
-        <Route path='/editarusuario/:_id' element={<EditarUsuario />}></Route>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<ListaUsuario />}></Route>
+          <Route path='/agregarusuario' element={<AgregarUsuario />}></Route>
+          <Route path='/editarusuario/:_id' element={<EditarUsuario />}></Route>
+        </Routes>
+      </div>
     </BrowserRouter>
-    </div>
   );
 }
 
