@@ -6,6 +6,8 @@ const eliminarUsuario = require('./routes/eliminarUsuario')
 const editarUsuario = require('./routes/editarUsuario')
 const actualizarUsuario = require('./routes/actualizarUsuario')
 const connectDB = require('./db/conexion')
+const cors = require('cors')
+
 require('dotenv').config()
 
 /* PUERTO */
@@ -21,6 +23,10 @@ app.use('/', editarUsuario)
 app.use('/', actualizarUsuario)
 app.use('/agregarusuario', agregarUsuario)
 
+app.use(cors({
+    origin:["http://localhost:3000", "https://crud-mern-app-ocn8.onrender.com"]
+    })
+    )
 
 /* CONEXION A LA BASE DE DATOS */
 const iniciar = async()=>{
