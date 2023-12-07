@@ -28,6 +28,9 @@ app.use(cors({
     })
     )
 
+app.get('/', (req, res) =>{
+    res.send('Welcome')
+})
 /* CONEXION A LA BASE DE DATOS */
 const iniciar = async()=>{
     try{
