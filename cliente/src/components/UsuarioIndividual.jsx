@@ -42,9 +42,9 @@ const UsuarioIndividual = ({id, usuario}) => {
 
 
   return(
-    <div className='container mt-5 pt-4'>
+    <div className='container mt-5 pt-4'data-aos="zoom-in">
       <div className="row">
-        <div className="col-sm-6 offset-3" data-aos="zoom-in">
+        <div className="col-sm-6 offset-3" >
           <ul className='list-group mb-2'>
             <li className='list-group-item'>{usuario.nombre}</li>
             <li className='list-group-item'>{usuario.email}</li>

@@ -20,7 +20,7 @@ const EditarUsuario = () => {
         .catch(err => {
           console.log(err);
         });
-    },[]);
+    },[params._id]);
     
     /* Actualizar los datos del usuario */
     const editarUsuario=() =>{
