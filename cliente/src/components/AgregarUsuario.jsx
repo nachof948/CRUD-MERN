@@ -19,7 +19,7 @@ const AgregarUsuario = () => {
     }
     console.log(usuario)
 
-    await axios.post('/agregarusuario', usuario)
+    await axios.post('https://crud-mern-o0u8.onrender.com/agregarusuario', usuario)
     .then(res => {
       //alert(res.data)
       Swal.fire({

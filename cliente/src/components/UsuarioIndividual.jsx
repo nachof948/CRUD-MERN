@@ -25,7 +25,7 @@ const UsuarioIndividual = ({id, usuario}) => {
       confirmButtonText: "Si, eliminalo!"
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`/eliminarusuario/${id}`)
+        axios.delete(`https://crud-mern-o0u8.onrender.com/eliminarusuario/${id}`)
         Swal.fire({
           title: "Eliminado!",
           text: "El usuario se elimino correctamente.",

@@ -39,7 +39,7 @@ const EditarUsuario = () => {
         /* Read more about isConfirmed, isDenied below */
         if (result.isConfirmed) {
           Swal.fire("Cambios realizados", "", "success");
-          axios.post(`/actualizarusuario/${params._id}`, actualizarUsuario)
+          axios.post(`https://crud-mern-o0u8.onrender.com/actualizarusuario/${params._id}`, actualizarUsuario)
       .then(res =>{
         console.log(res.data)
         navegar('/')
