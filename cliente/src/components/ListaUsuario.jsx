@@ -7,7 +7,7 @@ const ListaUsuario = () => {
   const [datosUsuarios, setDatosUsuarios] = useState([])
   
   useEffect(() =>{
-    axios.get('/usuarios').then(res =>{
+    axios.get('https://crud-mern-o0u8.onrender.com/usuarios').then(res =>{
       setDatosUsuarios(res.data)
     })
     .catch(err => console.log(err))
