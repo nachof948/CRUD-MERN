@@ -10,7 +10,7 @@ const EditarUsuario = () => {
   const [telefono, setTelefono] = useState('')
 
   useEffect(() => {
-      axios.post(`/obtenerdatos/${params._id}`)
+      axios.post(`https://crud-mern-o0u8.onrender.com/obtenerdatos/${params._id}`)
         .then(res => {
           const datosUsuario = res.data
           setNombre(datosUsuario.nombre)
